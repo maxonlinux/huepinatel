@@ -23,7 +23,7 @@ check.addEventListener("click", function () {
 
                 norobot.classList.remove('inactive')
                 btn.classList.add('inactive')
-            }, 2500);
+            }, 3000);
         });
     }, 1000);
 });
