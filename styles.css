@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: e-UkraineHead-UltraLight;
+    font-style: normal;
+    font-weight: 500;
+    src: url(/fonts/e-UkraineHead-UltraLight.otf) format("opentype")
+}
+
+@font-face {
+    font-family: e-UkraineHead-Bold;
+    font-style: normal;
+    font-weight: 500;
+    src: url(/fonts/e-UkraineHead-Bold.otf) format("opentype")
+}
+
+@font-face {
+    font-family: e-UkraineHead-Regular;
+    font-style: normal;
+    font-weight: 500;
+    src: url(/fonts/e-UkraineHead-Regular.otf) format("opentype")
+}
+
+:root {
+    --max-width: 1000px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 20px;
+}
+
+a {
+    color: blue;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 1px;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.2;
+}
+
+.logo__first {
+    width: 7px;
+    height: 20px;
+    background-color: rgb(66, 66, 255);
+}
+
+.logo__last {
+    width: 7px;
+    height: 20px;
+    background-color: rgb(231, 188, 44);
+}
+
+.logo__text {
+    font-family: 'e-UkraineHead-UltraLight', sans-serif;
+}
+
+.logo__marad {
+    font-size: 14px;
+}
+
+.header__lang {
+    gap: 10px;
+}
+
+.main-title {
+    font-family: 'e-UkraineHead-Regular', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.doc-search {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 30px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    box-shadow: 0 24px 40px rgba(63,82,132,.16);
+}
+
+.cont-title {
+    font-family: 'e-UkraineHead-Regular', sans-serif;
+    font-size: 24px;
+}
+
+.search-criteria {
+    font-weight: 400;
+    margin: 25px 0;
+    gap: 20px;
+}
+
+.za-nom-verif {
+    opacity: 0.3;
+}
+
+.nom-verif {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.symbol-count {
+    text-align: right;
+    opacity: 0.5;
+    font-size: 12px;
+    padding: 2px 15px;
+}
+
+.hui {
+    margin-top: 10px;
+    align-self: flex-end;
+    width: fit-content;
+}
+
+.not-robot {
+    background-color: rgb(249, 249, 249);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.not-robot .label {
+    gap: 15px;
+    font-size: 14px;
+}
+
+.not-robot .check {
+    appearance: none;
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.not-robot .check:checked {
+    width: 36px;
+    height: 36px;
+    margin: -4px;
+    border: 7px solid rgb(118, 155, 255);
+    opacity: 0.8;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: spin 1000ms ease-in infinite;
+}
+
+@keyframes spin {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.not-robot .captcha {
+    height: 60px;
+}
+
+.doc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f7fb;
+    padding: 30px;
+}
+
+.doc__img {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1705);
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.loader__inner {
+    width: 100%;
+    height: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.loader__inner::after {
+    display: block;
+    content: "";
+    height: 100%;
+    border-radius: 5px;
+    background-color: black;
+    animation: load 1200ms ease-in-out infinite;
+}
+
+.loader__text {
+    font-family: 'e-UkraineHead-Regular', sans-serif;
+    font-size: 24px;
+}
+
+@keyframes load {
+    0% {
+        transform: translateX(-100%);
+        width: 80%;
+    }
+
+    100% {
+        transform: translateX(var(--width));
+        width: 10%;
+    }
+}
+
+/* UI */
+
+.flex {
+    display: flex;
+}
+
+.flex.col {
+    flex-direction: column;
+}
+
+.flex.row {
+    flex-direction: row;
+}
+
+.flex.center {
+    align-items: center;
+}
+
+.flex.just {
+    justify-content: center;
+}
+
+.flex.between {
+    justify-content: space-between;
+}
+
+input {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.input-common {
+    border-radius: 5px;
+    padding: 14px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.3)
+}
+
+button {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+}
+
+.button-common {
+    appearance: none;
+    padding: 15px 50px;
+    background-color: rgb(53, 71, 230);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+    cursor: pointer;
+}
+
+.button-common:hover {
+    opacity: 0.9;
+}
+
+.button-common:active {
+    opacity: 1;
+}
+
+.inactive {
+    display: none;
+}

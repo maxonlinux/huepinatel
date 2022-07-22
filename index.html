@@ -1,0 +1,63 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Verification</title>
+    </head>
+    <body>
+        <div class="content">
+            <header class="header flex between">
+                <div class="logo flex row center">
+                    <div class="logo__flag">
+                        <div class="logo__first"></div>
+                        <div class="logo__last"></div>
+                    </div>
+                    <div class="logo__text">
+                        <div class="logo__marad">vrf.marad.gov.ua</div>
+                        <div class="logo__gov-sites">Державні сайти України</div>
+                    </div>
+                </div>
+                <div class="header__lang flex row">
+                    <span class="lang__ukr">УКР</span>
+                    <span class="lang__en"><a href="">EN</a></span>
+                </div>
+            </header>
+            <main>
+                <h2 class="main-title">Морські документи</h2>
+                <div class="doc-search flex col">
+                    <div class="cont-title">Пошук документу</div>
+                    <div class="search-criteria flex row">
+                        <div class="za-nom-doc">
+                            <a href="">За номером документу</a>
+                        </div>
+                        <div class="za-nom-verif">За номером веріфікації</div>
+                    </div>
+                    <div class="nom-verif">Номер веріфікації</div>
+                    <input
+                        type="text"
+                        class="input-common"
+                        value="JMkpwEG2gnuLFcxLcV9SAs"
+                    />
+                    <div class="symbol-count">22 / 22</div>
+                    <div class="hui">
+                        <div class="not-robot flex row">
+                            <label class="label flex center"><input type="checkbox" class="check" name="" id="">Я пинаю хуи</label>
+                            <img src="captcha.png" alt="" class="captcha">
+                        </div>
+                        <button class="button-common inactive">Похуй</button>
+                    </div>
+                </div>
+                <div class="loader inactive">
+                    <div class="loader__inner"></div>
+                    <div class="loader__text">Зачекайте, виконується пошук документу</div>
+                </div>
+            </main>
+        </div>
+        <div class="doc inactive">
+            <img src="huepinatel.png" alt="" class="doc__img">
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
