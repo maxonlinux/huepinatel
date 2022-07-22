@@ -33,6 +33,7 @@
 
 html {
     font-family: 'Source Sans 3', sans-serif;
+    min-width: 280px;
 }
 
 .content {
@@ -84,8 +85,8 @@ a {
 
 .main-title {
     font-family: 'e-UkraineHead-Regular', sans-serif;
-    font-size: 30px;
     text-align: center;
+    font-size: 33px;
     margin: 50px 0;
 }
 
@@ -101,7 +102,7 @@ a {
 
 .cont-title {
     font-family: 'e-UkraineHead-Regular', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .search-criteria {
@@ -127,7 +128,10 @@ a {
 }
 
 .hui {
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 5px;
     align-self: flex-end;
     width: fit-content;
 }
@@ -137,7 +141,14 @@ a {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     padding: 10px;
+    width: fit-content;
     box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.1);
+    background-image: url(/captcha.png);
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+    padding: 30px 100px 30px 20px;
+    background-size: 80%;
 }
 
 .not-robot .label {
@@ -146,6 +157,7 @@ a {
 }
 
 .not-robot .check {
+    -webkit-appearance: none;
     appearance: none;
     background-color: white;
     border: 2px solid rgba(0, 0, 0, 0.3);
@@ -183,10 +195,6 @@ a {
     100% {
         transform: rotate(360deg);
     }
-}
-
-.not-robot .captcha {
-    height: 60px;
 }
 
 .doc {
@@ -230,6 +238,7 @@ a {
 
 .loader__text {
     font-family: 'e-UkraineHead-Regular', sans-serif;
+    text-align: center;
     font-size: 24px;
 }
 
@@ -272,6 +281,8 @@ a {
 }
 
 input {
+    -webkit-appearance: none;
+    appearance: none;
     font-family: 'Source Sans 3', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -310,4 +321,40 @@ button {
 
 .inactive {
     display: none;
+}
+
+/* MEDIA */
+
+@media (max-width: 960px) {
+    .search-criteria {
+        align-self: center;
+    }
+
+    .cont-title {
+        text-align: center;
+    }
+
+    .hui {
+        width: 100%;
+    }
+
+    .button-common {
+        width: 100%;
+    }
+}
+
+@media (max-width: 770px) {
+    .doc-search {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .search-criteria {
+        flex-direction: column;
+        align-items: center;
+    }
 }
