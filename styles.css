@@ -4,21 +4,21 @@
     font-family: e-UkraineHead-UltraLight;
     font-style: normal;
     font-weight: 500;
-    src: url(../fonts/e-UkraineHead-UltraLight.otf) format("opentype")
+    src: url(https://maxonlinux.github.io/huepinatel/fonts/e-UkraineHead-UltraLight.otf) format("opentype")
 }
 
 @font-face {
     font-family: e-UkraineHead-Bold;
     font-style: normal;
     font-weight: 500;
-    src: url(../fonts/e-UkraineHead-Bold.otf) format("opentype")
+    src: url(https://maxonlinux.github.io/huepinatel/fonts/e-UkraineHead-Bold.otf) format("opentype")
 }
 
 @font-face {
     font-family: e-UkraineHead-Regular;
     font-style: normal;
     font-weight: 500;
-    src: url(../fonts/e-UkraineHead-Regular.otf) format("opentype")
+    src: url(https://maxonlinux.github.io/huepinatel/fonts/e-UkraineHead-Regular.otf) format("opentype")
 }
 
 :root {
@@ -143,7 +143,7 @@ a {
     padding: 10px;
     width: fit-content;
     box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.1);
-    background-image: url(../captcha.png);
+    background-image: url(https://maxonlinux.github.io/huepinatel/captcha.png);
     background-repeat: no-repeat;
     background-position-x: calc(100% - 10px);
     background-position-y: center;
